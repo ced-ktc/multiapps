@@ -6,13 +6,15 @@ pipeline{
     stages {
 
         stage ('Git checkout'){
-
-            script{
-                gitCheckout(
-                    branch: "master",
-                    url: "https://github.com/ced-ktc/multiapps.git"
-                )
+            steps{
+                script{
+                    gitCheckout(
+                        branch: "master",
+                        url: "https://github.com/ced-ktc/multiapps.git"
+                    )
+                }
             }
+            
         }
 
     }
